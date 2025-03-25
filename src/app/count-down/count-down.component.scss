@@ -40,6 +40,12 @@
       padding: 1em 2em;
       border-radius: 100vh;
       border-width: 1px;
+
+      transition: all 0.22s ease-in-out;
+
+      &:active {
+        scale: 0.9;
+      }
     }
 
     .btn-reset-timer {
