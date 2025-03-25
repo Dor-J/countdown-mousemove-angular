@@ -1,1 +1,30 @@
-<p>count-down works!</p>
+<section class="count-down-section">
+  <div class="count-down-contaier">
+    <div class="count-down-inner">
+      <span
+        class="timer-count"
+        [style.color]="remainingSeconds <= 6 ? 'red' : ''"
+      >
+        {{ remainingSeconds }}
+      </span>
+    </div>
+    <div class="timer-controls">
+      <label for="start-from" hidden></label>
+      <input
+        type="number"
+        name="start-from"
+        id="start-from"
+        min="1"
+        max="999"
+        value="{{ startFrom }}"
+        (change)="onStartFromChange($event)"
+      />
+      <button type="button" class="btn-reset-timer" (click)="onResetClick()">
+        Reset
+      </button>
+      <button type="button" class="btn-toggle-timer" (click)="onToggleTimer()">
+        Timer {{ this.intervalId ? "Stop" : "Start" }}
+      </button>
+    </div>
+  </div>
+</section>
