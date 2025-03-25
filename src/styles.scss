@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global styles */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-clr-primary: rgb(173, 216, 230);
+  --bg-clr-secondary: rgb(238, 251, 255);
+}
+
+body {
+  background-color: var(--bg-clr-primary);
+}
+
+img {
+  width: 100%;
+}
