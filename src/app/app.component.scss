@@ -4,3 +4,15 @@ Header {
   margin-block-end: 1em;
   padding-block: 1em;
 }
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1em;
+
+  @media (min-width: 500px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+  }
+}
