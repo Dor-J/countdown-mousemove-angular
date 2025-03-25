@@ -1,1 +1,14 @@
-<p>mouse-move works!</p>
+<section class="mouse-move-section">
+  <div class="mouse-move-cointainer">
+    <h3>Mouse Position</h3>
+    <div class="position" *ngIf="isOn">
+      <span>x:</span>
+      <span>{{ currMousePosition.x }}</span>
+      <span>y:</span>
+      <span>{{ currMousePosition.y }}</span>
+    </div>
+    <button class="toggle-on" (click)="onToggleIsOn()">
+      {{ isOn ? "Pause" : "Resume" }}
+    </button>
+  </div>
+</section>
