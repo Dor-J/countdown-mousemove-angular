@@ -21,6 +21,9 @@ export class CountDownComponent implements OnInit, OnDestroy {
   }
 
   startInterval(): void {
+    if (this.intervalId) {
+      this.stopInterval();
+    }
     this.intervalId = setInterval(() => {
       this.remainingSeconds -= 1;
       if (this.remainingSeconds <= 0) this.stopInterval();
